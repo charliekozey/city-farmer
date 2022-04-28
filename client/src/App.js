@@ -1,23 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import { Switch, Route } from "react-router-dom"
+import Splash from "./components/Splash"
+import PlayWindow from './components/PlayWindow';
 
 function App() {
+
+  const [currentUser, setCurrentUser] = useState("")
+ 
+  useEffect(()=>{
+    fetch('/auth')
+    .then(res => {
+      if(res.ok){
+        res.json().then(user => setCurrentUser(user))
+      }
+    })
+  }, [])
+  
+  // function onLogout() {
+  //   setCurrentUser(null)
+  // }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Switch>
+        <Route path="/play">
+          <PlayWindow 
+            setCurrentUser={setCurrentUser} 
+          />
+        </Route>
+        <Route path="/">
+          <Splash 
+            currentUser={currentUser} 
+            setCurrentUser={setCurrentUser} 
+          />
+        </Route>
+      </Switch>
+
     </div>
   );
 }
