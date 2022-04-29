@@ -6,7 +6,7 @@ function PlayWindow() {
 let map = document.querySelector(".map");
 
 //start in the middle of the map
-let x = 90;
+let x = 170;
 let y = 34;
 let held_directions = []; //State of which arrow keys we are holding down
 let speed = 1; //How fast the character moves in pixels per frame

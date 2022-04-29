@@ -9,13 +9,19 @@ export default function LogIn({ setCurrentUser, handleLogIn }) {
     const [confirmPassword, setConfirmPassword] = useState("")
     const history = useHistory();
 
+    function logInSubmit(e) {
+        e.preventDefault()
+
+        handleLogIn(username, password)
+    }
+
     return (
         <div className="form-container">
             <h2>Log In</h2>
 
             {errors && errors.map(e => <h4 style={{color: "red"}}>{e}</h4>)}
 
-            <form onSubmit={(e) => handleLogIn(e)}>
+            <form onSubmit={(e) => logInSubmit(e)}>
                 <label htmlFor='username'>
                     Username: 
                 </label>

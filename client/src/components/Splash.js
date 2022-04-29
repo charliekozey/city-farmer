@@ -10,13 +10,12 @@ function Splash({ currentUser, setCurrentUser }) {
     const [errors, setErrors]= useState()
     const history = useHistory();
     
-    function handleLogIn(e) {
-        e.preventDefault()
+    function handleLogIn(username, password) {
 
         fetch('/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
-            body: JSON.stringify({username: currentUser.username, password: currentUser.password})
+            body: JSON.stringify({username, password})
         })
         .then(res => res.json())
         .then(data =>{
@@ -39,9 +38,7 @@ function Splash({ currentUser, setCurrentUser }) {
         <h1>
             welcome to cityfarmer!
         </h1>
-        
-            this is le splash page
-        
+            
             <Switch>
                 <Route path="/login">
                     <LogIn 

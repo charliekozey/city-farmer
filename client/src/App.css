@@ -1,7 +1,11 @@
+/* green gradient */
+/* #c7e58e #51966c #2d6349 #093331 #0f1f27 */
+
 :root {
   --pixel-size: 2px;
   --grid-cell: calc( var(--pixel-size) * 16);
-  --bg: #9fa7e4;
+  --bg: #0d1b21;
+  color: #ffffff
 }
 @media( min-width: 700px ) {
   :root {
@@ -28,6 +32,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .pixel-art {
@@ -39,7 +54,7 @@ body {
   /* This is just for Pen decoration */
   width: calc(var(--pixel-size) * 160);
   height: calc(var(--pixel-size) * 144);
-  outline: var(--pixel-size) solid #fff;
+  outline: var(--pixel-size) transparent;
   z-index:1; 
   position:relative;
 }
@@ -48,13 +63,14 @@ body {
   width: calc(var(--pixel-size) * 160);
   height: calc(var(--pixel-size) * 144);
   overflow: hidden;
-  background: #61ddf7;
+  background: rgb(81,150,108);
+  background: linear-gradient(0deg, rgba(81,150,108,1) 0%, rgba(19,38,43,1) 79%, rgba(15,31,39,1) 100%);
   position:relative;
 }
 
 .map {
   image-rendering: pixelated;
-  background-image: url("https://assets.codepen.io/21542/CameraDemoMap.png");
+  background-image: url("your-apartment.png");
   background-size: 100%;
   width: calc(13 * var(--grid-cell));
   height: calc(10 * var(--grid-cell));
@@ -80,7 +96,7 @@ body {
 
 .character_spritesheet {
   position: absolute;
-  background: url("https://assets.codepen.io/21542/DemoRpgCharacter.png") no-repeat no-repeat;
+  background: url("./sprite-1-fez.png") no-repeat no-repeat;
   background-size: 100%;
   width: calc( var(--grid-cell)* 8 );
   height: calc( var(--grid-cell)* 8 );

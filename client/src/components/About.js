@@ -7,7 +7,7 @@ function About() {
 
         <div className="about">
             
-            a farming game set in an urban environment emphasizing themes of cooperation and mutual aid
+            a game about growing and sharing food in the city
 
             <div>
                 <Link to="/">Back to menu</Link> 
