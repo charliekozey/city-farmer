@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  resources :backpack_items
+  resources :plots
+  resources :crops
+  resources :items
+  resources :boxes
+  resources :plants
   resources :users, only: [:show, :create]
 
   post "/login", to: "sessions#create"

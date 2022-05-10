@@ -77,6 +77,11 @@ a:visited {
   position: relative;
 }
 
+.backpack-inventory {
+  border: solid 3px;
+  border-color: red;
+}
+
 .character {
   width: calc( var(--grid-cell)* 2 );
   height: calc( var(--grid-cell)* 2 );
@@ -96,7 +101,7 @@ a:visited {
 
 .character_spritesheet {
   position: absolute;
-  background: url("./sprite-1-fez.png") no-repeat no-repeat;
+  background: url("./farmer-sprite-1.png") no-repeat no-repeat;
   background-size: 100%;
   width: calc( var(--grid-cell)* 8 );
   height: calc( var(--grid-cell)* 8 );
