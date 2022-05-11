@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import plant1 from "../plant-1.png";
-// import BackpackItem from "./BackpackItem";
+import React, { useState, useEffect } from "react";
+import BackpackItem from "./BackpackItem";
 
 function Backpack({backpackArray}) {
 
@@ -8,10 +7,16 @@ function Backpack({backpackArray}) {
     //     <BackpackItem />
     // );
 
+    // useEffect(() => {
+    //     fetch('/')
+    //     .then(res => res.json())
+    //     .then(reviews => setBackpackContents(reviews))
+    // }, [])
+
     return (
         <div>
-            Backpack inventory goes here
-            <img src={plant1} alt="item 1"/>
+            Backpack inventory goes here: 
+            <BackpackItem />
         </div>
     );
 }

@@ -30,7 +30,6 @@ export default function SignUp({ handleLogIn, setCurrentUser, currentUser }) {
         })
         .catch(error => console.log(error))
 
-        
     }
 
     return (

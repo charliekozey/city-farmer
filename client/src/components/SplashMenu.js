@@ -12,7 +12,7 @@ function SplashMenu({ currentUser }) {
                     <h3> Hi, {currentUser.username} </h3>
 
                     <div>
-                        <Link to="/character-select">Continue</Link> 
+                        <Link to="/play">Continue</Link> 
                     </div>
                     <div> 
                         <Link to="/login">Log out</Link>
