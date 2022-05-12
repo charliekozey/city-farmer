@@ -10,19 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_11_175623) do
+ActiveRecord::Schema.define(version: 2022_05_12_162728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "backpack_items", force: :cascade do |t|
-    t.integer "quantity"
+  create_table "backpacks", force: :cascade do |t|
+    t.string "name"
+    t.string "item_1"
+    t.string "item_2"
+    t.string "item_3"
+    t.string "item_4"
+    t.string "item_5"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "boxes", force: :cascade do |t|
     t.string "name"
+    t.string "item_1"
+    t.string "item_2"
+    t.string "item_3"
+    t.string "item_4"
+    t.string "item_5"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,6 +57,12 @@ ActiveRecord::Schema.define(version: 2022_05_11_175623) do
     t.string "name"
     t.string "image"
     t.boolean "is_seed"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "message_text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

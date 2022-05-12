@@ -67,10 +67,10 @@ function PlayControls({ character, map, pixelSize }) {
        });
     };
  
-    // useEffect(() => {
-    //     step(); //kick off the first step!
+    useEffect(() => {
+        step(); //kick off the first step!
 
-    // }, [character])
+    }, [character])
  
  
  

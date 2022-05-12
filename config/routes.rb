@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :backpacks, only: [:show, :index, :update]
+  resources :messages, only: [:show, :index]
   resources :game_objects, only: [:show, :index]
   resources :backpack_items
   resources :plots

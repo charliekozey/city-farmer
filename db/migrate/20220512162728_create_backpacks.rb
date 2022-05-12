@@ -1,6 +1,6 @@
-class CreateBoxes < ActiveRecord::Migration[6.1]
+class CreateBackpacks < ActiveRecord::Migration[6.1]
   def change
-    create_table :boxes do |t|
+    create_table :backpacks do |t|
       t.string :name
       t.string :item_1
       t.string :item_2

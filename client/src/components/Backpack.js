@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from "react";
 import BackpackItem from "./BackpackItem";
 
-function Backpack({backpackArray}) {
+function Backpack({backpackContents}) {
 
-    // const backpackContents = backpackArray.map(
-    //     <BackpackItem />
-    // );
+    const items = backpackContents.map((e) => {
+        return (
+        <div>{e}</div>
+        )
+    })
 
-    // useEffect(() => {
-    //     fetch('/')
-    //     .then(res => res.json())
-    //     .then(reviews => setBackpackContents(reviews))
-    // }, [])
+    console.log(`CONTENTS: ${backpackContents}`)
 
     return (
         <div>
-            Backpack inventory goes here: 
-            <BackpackItem />
+            In backpack:
+            {items}
         </div>
     );
 }

@@ -77,16 +77,30 @@ a:visited {
   position: relative;
 }
 
+.game-object {
+  min-width: 40px;
+  min-height: 50px;
+}
+
 .backpack-inventory {
   border: solid 3px;
-  border-color: red;
+  border-color: lightslategray;
+  padding: 10px 5px;
+  max-width: calc(var(--pixel-size) * 156);
+}
+
+.dialogue-box {
+  border: solid 3px;
+  border-color: lightslategray;
+  padding: 10px 5px;
+  max-width: calc(var(--pixel-size) * 156);
 }
 
 .character {
   width: calc( var(--grid-cell)* 2 );
   height: calc( var(--grid-cell)* 2 );
   position: absolute;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .shadow {
